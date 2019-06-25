@@ -1,4 +1,4 @@
-# Maintainer: George Raven <GeorgeRavenCommunity AT outlook dot com>
+# Maintainer: George Raven <GeorgeRavenCommunity AT pm dot me>
 pkgname=python-pimoroni-bme680-git
 _pkgsrcname="bme680-python"
 
