@@ -45,7 +45,7 @@ check() {
 }
 
 package() {
-	cd "$srcdir/${pkgsrcname}"
+	cd "$srcdir/${pkgsrcname}/library" # they store their setup.py here
 	python3 setup.py install --prefix=/usr --root="$pkgdir/" --optimize=1
 	install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
