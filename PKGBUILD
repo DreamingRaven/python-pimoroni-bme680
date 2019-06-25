@@ -2,7 +2,7 @@
 pkgname=python-pimoroni-bme680-git
 pkgsrcname="bme680-python"
 
-pkgver=0.0.0
+pkgver=v1.0.5.r14.91434ca
 
 pkgrel=1
 pkgdesc="Python library for the BME680 gas, temperature, humidity, and pressure sensor."
@@ -47,5 +47,6 @@ check() {
 package() {
 	cd "$srcdir/${pkgsrcname}/library" # they store their setup.py here
 	python3 setup.py install --prefix=/usr --root="$pkgdir/" --optimize=1
-	# install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+	cd "$srcdir/${pkgsrcname}" # returning to standard location
+	install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
