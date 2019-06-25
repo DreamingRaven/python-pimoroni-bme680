@@ -22,7 +22,7 @@ replaces=()
 backup=()
 options=()
 install=
-source=("${pkgsrcname}::git+https://github.com/pimoroni/${pkgsrcname}#branch\=${branch}")
+source=("${pkgsrcname}::git+https://github.com/pimoroni/${pkgsrcname}#branch=${branch}")
 noextract=()
 md5sums=('SKIP')
 
